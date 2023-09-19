@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/propio.css">
+    <title>Inicio de sesion</title>
+</head>
+<body>
+    
+<div>
+    <h1>Ingresa con una cuenta creada anteriormente</h1>
+    <form action="/log" method="post">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="mensaje">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        <input required type="email" name="email" placeholder="correo electronico"><br>
+        <input required type="password" name="clave" placeholder="contraseña"><br>
+        <input required type="submit" value="siguiente" placeholder="siguiente">
+    </form>    
+</div>
+</body>
+</html>

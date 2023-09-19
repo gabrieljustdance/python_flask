@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(160, 156, 156);
+}
+
+h1 {
+   text-align: center;
+   box-shadow: 1px 1px 0px black;
+   padding: 10px; 
+}
+
+.menu {
+    display: none;
+}

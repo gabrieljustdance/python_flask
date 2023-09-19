@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/propio.css">
+    <title>Respuesta</title>
+</head>
+<body>
+    <h1>Respuesta del Mecanico</h1>
+    {% if data|length != 0 %}
+        {% for respuesta in data %}
+            <div class="respuesta_contenedor">
+                <p><b>Mecanico: </b>{{ respuesta[1] }} {{ respuesta[2] }}</p>
+                <p><b>Peticion: </b>{{ respuesta[3] }}</p>
+                <p><b>Respuesta: </b>{{ respuesta[4] }}</p>
+            </div>
+        {% endfor %} 
+    {% else %}
+        <h1>Su peticion se esta procesando</h1>
+    {% endif %}
+</body>
+</html>

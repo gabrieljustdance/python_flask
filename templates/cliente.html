@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/propio.css">
+    <link rel="stylesheet" href="/static/cliente.css">
+    <title>Cliente</title>
+</head>
+<body>
+      
+ <div>
+    <ul class="nav">
+        <li>Bienvenido {{ data.nombre }} {{ data.apellido }}</li>
+        <li class="exit">
+            <button type="button" class="respuesta" onclick="window.location.href = '/respuesta'">ver respuesta</button>
+            <button type="button" class="cerrar" onclick="window.location.href = '/exit'">cerrar sesion</button>
+        </li>
+    </ul>
+    <h1>Datos del automovil</h1>
+    <form action="/carro" method="post">
+        <input type="text" required type="text" name="placa" placeholder="ingrese su numero de placa"><br>
+        <input type="text" required type="text" name="marca" placeholder="ingrese la marca"><br>
+        <input type="text" required type="text" name="modelo" placeholder="ingrese el modelo"><br>
+        <input type="date" name="fecha"><br>
+        <input type="text" required type="text" name="color" placeholder="ingrese el color"><br>
+        <textarea name="info" cols="30" rows="10" placeholder="detalle el problema de su vehiculo"></textarea>
+        <input required type="submit" value="enviar" placeholder="enviar">
+
+    </form>    
+</div>
+
+</body>
+</html>

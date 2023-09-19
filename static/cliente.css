@@ -1,0 +1,20 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  overflow-y: auto;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  color: rgb(201, 201, 201);
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.exit {
+  position: absolute;
+  right: 7%;
+}
